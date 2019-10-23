@@ -110,7 +110,13 @@ class CreateItemViewController: UIViewController {
     }
     
     @objc private func submitButtonPressed() {
-        //create a new cell
-        //persist the data
+        //TODO: Add validations to fields (to make sure there is all the right info)
+        let item = Item(name: self.nameInput.text ?? "something gross", price: priceValue, image: Data())
+        do {
+            try ItemPersistenceHelper.manager.save(newItem: item)
+            self.navigationController?.popViewController(animated: true)
+        } catch {
+            fatalError()
+        }
     }
 }

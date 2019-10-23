@@ -15,6 +15,8 @@
 		546EE96A2360DC5400043112 /* ShoppingItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EE9692360DC5400043112 /* ShoppingItemCollectionViewCell.swift */; };
 		546EE96C2360E76300043112 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EE96B2360E76300043112 /* Item.swift */; };
 		546EE96E2360EE7600043112 /* CreateItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EE96D2360EE7600043112 /* CreateItemViewController.swift */; };
+		546EE9702360F64D00043112 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EE96F2360F64D00043112 /* PersistenceHelper.swift */; };
+		546EE9722360F66A00043112 /* ItemPersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EE9712360F66A00043112 /* ItemPersistenceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		546EE9692360DC5400043112 /* ShoppingItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		546EE96B2360E76300043112 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		546EE96D2360EE7600043112 /* CreateItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemViewController.swift; sourceTree = "<group>"; };
+		546EE96F2360F64D00043112 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		546EE9712360F66A00043112 /* ItemPersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPersistenceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			children = (
 				546EE9552360D1FA00043112 /* AppDelegate.swift */,
 				546EE9572360D1FA00043112 /* SceneDelegate.swift */,
+				546EE96F2360F64D00043112 /* PersistenceHelper.swift */,
+				546EE9712360F66A00043112 /* ItemPersistenceHelper.swift */,
 				546EE96D2360EE7600043112 /* CreateItemViewController.swift */,
 				546EE9592360D1FA00043112 /* ViewController.swift */,
 				546EE9692360DC5400043112 /* ShoppingItemCollectionViewCell.swift */,
@@ -145,7 +151,9 @@
 			files = (
 				546EE96C2360E76300043112 /* Item.swift in Sources */,
 				546EE96E2360EE7600043112 /* CreateItemViewController.swift in Sources */,
+				546EE9722360F66A00043112 /* ItemPersistenceHelper.swift in Sources */,
 				546EE95A2360D1FA00043112 /* ViewController.swift in Sources */,
+				546EE9702360F64D00043112 /* PersistenceHelper.swift in Sources */,
 				546EE96A2360DC5400043112 /* ShoppingItemCollectionViewCell.swift in Sources */,
 				546EE9562360D1FA00043112 /* AppDelegate.swift in Sources */,
 				546EE9582360D1FA00043112 /* SceneDelegate.swift in Sources */,

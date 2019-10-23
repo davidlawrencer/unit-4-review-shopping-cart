@@ -14,6 +14,12 @@ enum CellReuseIdentifier: String {
 
 class ViewController: UIViewController {
     
+    private var items = [Item]() {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+    
     // MARK: Views
     //collection view
     
@@ -44,6 +50,14 @@ class ViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = plusButton
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        do {
+            items = try ItemPersistenceHelper.manager.getItems()
+        } catch {
+            print("didn't get items")
+        }
+    }
+    
     private func constrainCollectionView() {
         //the big wordy thing to make sure that the resizing mask doesn't try to set the constraints for us
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -58,18 +72,28 @@ class ViewController: UIViewController {
     @objc private func navigateToAddScreen() {
         self.navigationController?.pushViewController(CreateItemViewController(), animated: true)
     }
+    
+    @objc private func longPressedCell() {
+        print("stuff please")
+    }
 }
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let item = items[indexPath.item]
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellReuseIdentifier.itemCell.rawValue, for: indexPath) as? ShoppingItemCollectionViewCell else {return UICollectionViewCell()}
-        cell.nameLabel.text = "Chicken"
-        cell.priceLabel.text = "500"
+        cell.nameLabel.text = item.name
+        cell.priceLabel.text = String(item.price)
         cell.imageView.image = .checkmark
+        cell.isUserInteractionEnabled = true
+        let gesture = UITapGestureRecognizer()
+        
+        gesture.addTarget(self, action: #selector(longPressedCell))
+        cell.addGestureRecognizer(gesture)
         return cell
     }
 }
