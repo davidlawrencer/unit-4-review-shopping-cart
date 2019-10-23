@@ -12,6 +12,7 @@
 		546EE95A2360D1FA00043112 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EE9592360D1FA00043112 /* ViewController.swift */; };
 		546EE95F2360D1FB00043112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546EE95E2360D1FB00043112 /* Assets.xcassets */; };
 		546EE9622360D1FB00043112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 546EE9602360D1FB00043112 /* LaunchScreen.storyboard */; };
+		546EE96A2360DC5400043112 /* ShoppingItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EE9692360DC5400043112 /* ShoppingItemCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		546EE95E2360D1FB00043112 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		546EE9612360D1FB00043112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		546EE9632360D1FB00043112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		546EE9692360DC5400043112 /* ShoppingItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				546EE9552360D1FA00043112 /* AppDelegate.swift */,
 				546EE9572360D1FA00043112 /* SceneDelegate.swift */,
 				546EE9592360D1FA00043112 /* ViewController.swift */,
+				546EE9692360DC5400043112 /* ShoppingItemCollectionViewCell.swift */,
 				546EE95E2360D1FB00043112 /* Assets.xcassets */,
 				546EE9602360D1FB00043112 /* LaunchScreen.storyboard */,
 				546EE9632360D1FB00043112 /* Info.plist */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				546EE95A2360D1FA00043112 /* ViewController.swift in Sources */,
+				546EE96A2360DC5400043112 /* ShoppingItemCollectionViewCell.swift in Sources */,
 				546EE9562360D1FA00043112 /* AppDelegate.swift in Sources */,
 				546EE9582360D1FA00043112 /* SceneDelegate.swift in Sources */,
 			);
