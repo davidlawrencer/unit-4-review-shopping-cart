@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum CellReuseIdentifier: String {
+    case itemCell
+}
+
 class ViewController: UIViewController {
 
     
@@ -18,6 +22,7 @@ class ViewController: UIViewController {
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: CGRect(x: self.view.bounds.minX, y: self.view.bounds.minY, width: self.view.bounds.width, height: self.view.safeAreaLayoutGuide.layoutFrame.height), collectionViewLayout: layout)
         collectionView.backgroundColor = .cyan
+        collectionView.register(ShoppingItemCollectionViewCell.self, forCellWithReuseIdentifier: CellReuseIdentifier.itemCell.rawValue)
         return collectionView
     }()
 
@@ -32,7 +37,8 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .white
         self.view.addSubview(collectionView)
         constrainCollectionView()
-        
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     private func constrainCollectionView() {
@@ -46,6 +52,31 @@ class ViewController: UIViewController {
         ])
     }
 }
+
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellReuseIdentifier.itemCell.rawValue, for: indexPath) as? ShoppingItemCollectionViewCell else {return UICollectionViewCell()}
+        cell.nameLabel.text = "Chicken"
+        cell.priceLabel.text = "500"
+        cell.imageView.image = .checkmark
+        return cell
+    }
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 150, height: 200)
+    }
+}
+
+
+
+
+
 
 //custom delegation
 //user defaults
