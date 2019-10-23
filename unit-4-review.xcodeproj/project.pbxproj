@@ -13,6 +13,7 @@
 		546EE95F2360D1FB00043112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546EE95E2360D1FB00043112 /* Assets.xcassets */; };
 		546EE9622360D1FB00043112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 546EE9602360D1FB00043112 /* LaunchScreen.storyboard */; };
 		546EE96A2360DC5400043112 /* ShoppingItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EE9692360DC5400043112 /* ShoppingItemCollectionViewCell.swift */; };
+		546EE96C2360E76300043112 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EE96B2360E76300043112 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		546EE9612360D1FB00043112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		546EE9632360D1FB00043112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		546EE9692360DC5400043112 /* ShoppingItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		546EE96B2360E76300043112 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				546EE9572360D1FA00043112 /* SceneDelegate.swift */,
 				546EE9592360D1FA00043112 /* ViewController.swift */,
 				546EE9692360DC5400043112 /* ShoppingItemCollectionViewCell.swift */,
+				546EE96B2360E76300043112 /* Item.swift */,
 				546EE95E2360D1FB00043112 /* Assets.xcassets */,
 				546EE9602360D1FB00043112 /* LaunchScreen.storyboard */,
 				546EE9632360D1FB00043112 /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546EE96C2360E76300043112 /* Item.swift in Sources */,
 				546EE95A2360D1FA00043112 /* ViewController.swift in Sources */,
 				546EE96A2360DC5400043112 /* ShoppingItemCollectionViewCell.swift in Sources */,
 				546EE9562360D1FA00043112 /* AppDelegate.swift in Sources */,
