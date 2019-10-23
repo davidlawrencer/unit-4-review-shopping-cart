@@ -13,10 +13,10 @@ enum CellReuseIdentifier: String {
 }
 
 class ViewController: UIViewController {
-
     
     // MARK: Views
     //collection view
+    
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -26,10 +26,12 @@ class ViewController: UIViewController {
         return collectionView
     }()
 
+    lazy var plusButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(navigateToAddScreen))
+        return button
+    }()
     //some kind of navigation
-    
     //navigation bar title (to show name)
-    
     //nav bar button
     
     override func viewDidLoad() {
@@ -39,6 +41,7 @@ class ViewController: UIViewController {
         constrainCollectionView()
         collectionView.dataSource = self
         collectionView.delegate = self
+        self.navigationItem.rightBarButtonItem = plusButton
     }
     
     private func constrainCollectionView() {
@@ -50,6 +53,10 @@ class ViewController: UIViewController {
             collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         ])
+    }
+    
+    @objc private func navigateToAddScreen() {
+        self.navigationController?.pushViewController(CreateItemViewController(), animated: true)
     }
 }
 
@@ -72,10 +79,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: 150, height: 200)
     }
 }
-
-
-
-
 
 
 //custom delegation
